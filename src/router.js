@@ -12,24 +12,32 @@ export default new VueRouter({
     mode: "history",
     routes: [
         {
-            path: "/home",
-            component: Home
+            path: "/",
+            components: {
+                default: Home,
+                header: Header
+            }
         },
         {
             path: "/introduction",
-            component: Introduction
+            components: {
+                default: Introduction,
+                header: Header
+            }
         },
         {
             path: "/skill",
-            component: Skill
+            components: {
+                default: Skill,
+                header: Header
+            }
         },
         {
             path: "/portfolio",
-            component: Portfolio
-        },
-        {
-            path: "/header",
-            component: Header
+            components: {
+                default: Portfolio,
+                header: Header
+            }
         }
     ]
 })
