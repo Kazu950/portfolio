@@ -10,6 +10,6 @@
 .home {
     text-align: center;
     padding-top: 12%;
-    font-size: 3em;  
+    font-size: 4.8rem;  
 }
 </style>

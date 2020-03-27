@@ -20,16 +20,12 @@
 <style lang="scss" scoped>
 .header {
     // align-items: center;
-    font-size: 45px;
+    font-size: 4.5em;
     width: 80%;
     margin: 2% auto;
     
     &__list {
         @include flex-around;
-    }
-
-    &__item {
-        
     }
 }
 </style>

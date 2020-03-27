@@ -5,13 +5,6 @@
   </div>
 </template>
 
-<script>
-import "ress"
-export default {
-  
-}
-</script>
-
 <style lang="scss">
 a {
 
