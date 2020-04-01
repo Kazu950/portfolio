@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <ul class="header__list">
-            <li class="header__item" v-for="item in headerItem" :key="item.id">
+            <li class="header__item" v-for="item in headerItem" :key="item.item">
                 <router-link :to="item.url" active-class="header__item--active" exact>{{ item.item }}</router-link>
             </li>
         </ul>

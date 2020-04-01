@@ -5,7 +5,7 @@
         <img class="profile__image" :src="getImage">
         <div class="description">
             <table class="description__table">
-                <tr  v-for="item in getItem" :key="item.id">
+                <tr v-for="item in getItem" :key="item.headline">
                     <th>{{ item.headline }}</th><td>{{ item.element }}</td>
                 </tr>
             </table>
@@ -27,33 +27,28 @@ export default {
     margin: auto;
 
     &__title {
-        display: inline-block;
-        text-align: center;
-        font-size: 5rem;
-        margin: 2% 0;
-        border-bottom: double 2px #383838;
+        @include page-title;
         
     }
     &__image {
         border-radius: 50%;
         width: 30rem;
         height: 30rem;
-        margin: 2.5% auto;
+        margin: 7% 0;
     }
     .description {
 
         &__table {
             margin: auto;
-            width: 100%;
+            width: 80%;
             
             th {
                 font-size: 3.5rem;
-                padding: 15px 0;
+                padding: 5rem 0;
                 width: 50%;
             }
             td {
-                font-size: 3rem;
-                padding: 15px 0;
+                font-size: 2.6rem;
                 width: 50%;
             }
         }

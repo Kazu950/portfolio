@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@mixin flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin page-title {
+    display: inline-block;
+    text-align: center;
+    font-size: 5rem;
+    margin: 2% 0;
+    border-bottom: double 2px #383838;
+}

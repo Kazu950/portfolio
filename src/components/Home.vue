@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 .home {
     text-align: center;
-    padding-top: 12%;
+    padding-top: 16%;
     font-size: 4.8rem;  
 }
 </style>
