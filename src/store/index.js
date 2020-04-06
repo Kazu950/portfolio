@@ -123,10 +123,113 @@ const skill = {
     }
 }
 
+const portfolio = {
+    nameSpaced: true,
+    state: {
+        portfolioElement: [
+            {
+                title: "飲食店検索アプリ",
+                image: "/portfolio/restaurantSearch.png",
+                comment: "JavaScriptのアウトプットをかねて「ぐるなびAPI」を使用し、自分の近くにある飲食店を検索することができるアプリを作成しました。",
+                tag: [
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ],
+            },
+            {
+                title: "チャットアプリ",
+                image: "/portfolio/noImage.jpeg",
+                comment: "インターンシップで作成したチャットアプリです。",
+                tag: [
+                    "HTML",
+                    "CSS",
+                    "Bootstrap",
+                    "JavaScript",
+                    "Node.js"
+                ],
+            },
+            {
+                title: "ポートフォリオサイト",
+                image: "/portfolio/portfolio.png",
+                comment: "SPAの学習のため自己紹介サイトを作成しました。",
+                tag: [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Vue.js",
+                    "Sass"
+                ],
+            },
+            {
+                title: "Todoリスト",
+                image: "/portfolio/todo.png",
+                comment: "CRUD機能＋タスク検索機能付きTodoリストを作成しました。",
+                tag: [
+                    "HTML",
+                    "CSS",
+                    "Ruby",
+                    "Ruby on Rails",
+                    "Bootstrap"
+                ],
+            }
+        ],
+        isShow: false
+    },
+    getters: {
+        getPortfolioElement(state){ return state.portfolioElement },
+        getModal(state){ return state.isShow }
+    },
+    mutations: {
+        openModal(state) {
+            state.isShow = true
+        },
+        closeModal(state) {
+            state.isShow = false
+        }
+    },
+    actions: {
+        showModal ({ state, commit }, id) {
+            commit('openModal')
+            commit('setPortfolio', state.portfolioElement[id])
+          }
+    }
+}
+
+const modal = {
+    nameSpaced: true,
+    state: {
+        portfolio: {
+            title: "",
+            image: "",
+            comment: "",
+            tag: ""
+        }
+    },
+    getters: {
+        getPortfolio(state){ return state.portfolio }
+    },
+    mutations: {
+        setPortfolio(state, info) {
+            state.portfolio.title = info.title
+            state.portfolio.image = info.image
+            state.portfolio.comment = info.comment
+            state.portfolio.tag = info.tag
+        }
+    },
+    actions: {
+        closeModal({ commit }) {
+            commit("closeModal")
+        }
+    }
+}
+
 export default new Vuex.Store({
     modules: {
         header,
         introduction,
-        skill
+        skill,
+        portfolio,
+        modal
     }
 })
