@@ -1,9 +1,12 @@
 @charset "UTF-8";
+$sp: 599px;
+$tablet: 1024;
 
 @mixin flex-around {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 @mixin flex-center {
     display: flex;
@@ -16,4 +19,17 @@
     font-size: 5rem;
     margin: 2% 0;
     border-bottom: double 2px #383838;
+    @include responsive-sp {
+        margin: 7%;
+    }
+}
+@mixin responsive-sp {
+    @media screen and(max-width: $sp) {
+        @content;
+    }
+}
+@mixin responsive-tablet {
+    @media screen and(max-width: $tablet) {
+        @content;
+    }
 }

@@ -39,6 +39,9 @@ export default {
         gap: 4rem;
         margin-bottom: 4.5rem;
         word-break: break-all;
+        @include responsive-sp {
+            grid-template-columns: 1fr;
+        }
     }
     .contents {
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);

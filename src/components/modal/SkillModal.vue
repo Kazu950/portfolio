@@ -43,6 +43,11 @@ export default {
         background-color: whitesmoke;
         position: relative;
 
+        @include responsive-sp {
+            width: 35rem;
+            height: 45rem;
+        }
+
         .element {
             width: 90%;
             height: 100%;
@@ -54,6 +59,11 @@ export default {
                 position: absolute;
                 top: -1rem;
                 left: 57.5rem;
+
+                @include responsive-sp {
+                    font-size: 3rem;
+                    left: 33.4rem;
+                }
             }
             &__image {
                 width: 100%;
@@ -63,6 +73,10 @@ export default {
             &__title {
                 font-size: 3.5rem;
                 margin: 1.5rem 0;
+
+                @include responsive-sp {
+                    font-size: 3rem;
+                }
             }
             &__comment {
                 font-size: 2rem;
@@ -74,10 +88,15 @@ export default {
             }
             &__tag {
                 padding: 0 0.8rem;
+                margin: 0.8rem;
                 overflow: scroll;
                 background-color: $color;
                 border: 1px solid $color;
                 border-radius: 1rem;
+
+                @include responsive-sp {
+                    font-size: 1.8rem;
+                }
             }
         }
     }

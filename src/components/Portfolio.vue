@@ -46,6 +46,10 @@ export default {
         grid-template-rows: 1fr;
         gap: 10rem;
         margin-bottom: 4.5rem;
+
+        @include responsive-sp {
+            grid-template-columns: 1fr;
+        }
     }
     .contents {
         position: relative;

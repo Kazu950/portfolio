@@ -23,6 +23,9 @@ export default {
     
     &__list {
         @include flex-around;
+        @include responsive-sp {
+            flex-direction: column;
+        }
     }
     &__item {
         &--active {

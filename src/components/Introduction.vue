@@ -28,7 +28,6 @@ export default {
 
     &__title {
         @include page-title;
-        
     }
     &__image {
         border-radius: 50%;
@@ -37,9 +36,10 @@ export default {
         margin: 7% 0;
     }
     .description {
+        margin: auto;
 
         &__table {
-            margin: auto;
+            margin: 0 auto;
             width: 80%;
             
             th {
@@ -50,6 +50,20 @@ export default {
             td {
                 font-size: 2.6rem;
                 width: 50%;
+            }
+            @include responsive-sp {
+                th {
+                    display: block;
+                    font-size: 3.5rem;
+                    margin: 0 auto;
+                    width: 100%;
+                }
+                td {
+                    display: block;
+                    font-size: 2.6rem;
+                    margin: 0 auto;
+                    width: 100%;          
+                }
             }
         }
     }
