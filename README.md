@@ -1,24 +1,14 @@
-# portfolio-vuejs
+# ポートフォリオサイト
 
-## Project setup
-```
-npm install
-```
+Vue.jsを使用して[ポートフォリオサイト](https://hello-kazu.netlify.app/portfolio)を作成しました。使用した技術は以下の通りです。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 言語
+- HTML&CSS
+- JavaScript
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## FW
+- Vue.js
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## その他
+- Git
+- Sass
